@@ -7,6 +7,7 @@
   width: 100vw;
   height: 100vh;
   display: flex;
+  animation: loading-container 3s;
   justify-content: center;
 }
 
@@ -19,7 +20,53 @@
   animation: spin 2s linear infinite; /* Spin animation */
   position: absolute; /* Position the loader within the container */
   cursor: grab; /* Change cursor to indicate draggable element */
-  top: 35%;
+bottom: 0;
+}
+
+@keyframes loading-container {
+  0% {
+    animation-timing-function: ease-in;
+    opacity: 1;
+    transform: translateY(-50%);
+  }
+
+  24% {
+    opacity: 1;
+  }
+
+  40% {
+    animation-timing-function: ease-in;
+    transform: translateY(-25%);
+  }
+
+  65% {
+    animation-timing-function: ease-in;
+    transform: translateY(-12.5%);
+  }
+
+  82% {
+    animation-timing-function: ease-in;
+    transform: translateY(-6.25%);
+  }
+
+  93% {
+    animation-timing-function: ease-in;
+    transform: translateY(-3.125%);
+  }
+
+  25%,
+  55%,
+  75%,
+  87% {
+    animation-timing-function: ease-out;
+    transform: translateY(0);
+  }
+
+  100% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes spin {
