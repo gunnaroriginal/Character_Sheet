@@ -7,7 +7,7 @@
   width: 100vw;
   height: 100vh;
   display: flex;
-  animation: loading-container 3s;
+  animation: loading-container 2.5s;
   justify-content: center;
 }
 
